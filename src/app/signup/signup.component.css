@@ -1,0 +1,15 @@
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+#img-bg {
+    background-image: url('https://bit.ly/3qCFJkJ');
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
