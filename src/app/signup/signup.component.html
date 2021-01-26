@@ -14,32 +14,32 @@
 
             <div class="form-group mb-2">
                 <label for="name" class="fs-12">Nome</label>
-                <input class="form-control fs-12 fs-12" type="text" name="name" id="name" placeholder="Seu nome">
+                <input [(ngModel)]='user.nome' class="form-control fs-12 fs-12" type="text" name="name" id="name" placeholder="Seu nome">
             </div>
 
             <div class="form-group mb-2">
                 <label for="user" class="fs-12">Usuário</label>
-                <input class="form-control fs-12" type="text" name="user" id="user" placeholder="Seu usuário">
+                <input [(ngModel)]='user.usuario' class="form-control fs-12" type="text" name="user" id="user" placeholder="Seu usuário">
             </div>
 
             <div class="form-group mb-2">
                 <label for="photo" class="fs-12">Link da Foto</label>
-                <input class="form-control fs-12" type="text" name="photo" id="photo" placeholder="Link">
+                <input [(ngModel)]='user.foto' class="form-control fs-12" type="text" name="photo" id="photo" placeholder="Link">
             </div>
 
             <div class="form-group mb-2">
                 <label for="password" class="fs-12">Senha</label>
-                <input class="form-control fs-12" type="password" name="password" id="password" placeholder="Sua senha">
+                <input (input)='confirmSenha($event)' class="form-control fs-12" type="password" name="password" id="password" placeholder="Sua senha">
             </div>
 
             <div class="form-group mb-2">
                 <label for="confirmPassword" class="fs-12">Confirmar Senha</label>
-                <input class="form-control fs-12" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme a senha">
+                <input [(ngModel)]='user.senha' class="form-control fs-12" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme a senha">
             </div>
 
             <div class="form-group mb-2">
                 <label for="userType" class="fs-12">Tipo de Usuário</label>
-                <select class="form-control fs-12" name="userType" id="userType">
+                <select (change)='tipoUser($event)' class="form-control fs-12" name="userType" id="userType">
                     <option>Selecione um tipo de usuário:</option>
                     <option value="normal">Normal</option>
                     <option value="adm">Admnistrador</option>
@@ -48,7 +48,7 @@
             
             <div class="d-flex justify-content-center mt-3 mb-2">
                 <button class="btn btn-danger fs-12 mr-4" type="submit" routerLink='/entrar'>Cancelar</button>
-                <button class="btn btn-success fs-12" type="submit">Cadastrar</button>
+                <button (click)='cadastrar()' class="btn btn-success fs-12" type="submit">Cadastrar</button>
             </div>
         </div>
     </div>
