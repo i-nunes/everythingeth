@@ -13,3 +13,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.p-20 {
+    padding: 0 10% 0 10%;
+}
+.row {
+    height: 100vh;
+}
